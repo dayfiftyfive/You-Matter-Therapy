@@ -1,0 +1,61 @@
+.footer {
+    padding: 7rem;
+    position: relative;
+
+    background-color: $font-color;
+    border-radius: var(--block-radius);
+    color: #fff;
+    margin: 20rem 0 10rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__brand {
+        font-size: 4.4rem;
+    }
+
+    &__agency {
+
+        transition: all .2s ease-in;
+
+        &, &:link, &:visited {
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: .2em;
+            margin-top: 3rem;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__copy {
+        margin-top: 1rem;
+        opacity: .35;
+    }
+
+    &__nav {
+        list-style: none;
+        display: flex;
+
+        li {
+            font-size: 2rem;
+            font-family: $heading-font;
+            &:not(:last-child) {
+                margin-right: 4rem;
+            }
+
+            & > a {
+                transition: all .2s ease-in;
+            }
+
+            a, a:link, a:visited {
+                color: #fff;
+                opacity: .65;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

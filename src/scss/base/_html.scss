@@ -1,0 +1,35 @@
+/* BROWSER RESET */
+*,
+*::after,
+*::before {
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+    //transition: all .2s ease-in;
+}
+
+html {
+    font-size:62.5%;
+    scroll-behavior: smooth;
+
+    @include respond(tab-land){
+        font-size: 56.25%; //1rem = 9px
+    }
+    
+    @include respond(tab-port){
+        font-size: 50%; //1rem = 8px
+    }
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+
+    padding: 0 15rem;
+}
+
+::selection {
+  color: #fff;
+  background: rgba($primary, .6);
+}

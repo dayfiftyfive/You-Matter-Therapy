@@ -1,0 +1,29 @@
+body {
+    font-family: $body-font;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: var(--font-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $heading-font;
+    font-weight: 600;
+    font-style: normal;
+}
+
+a {
+    &,
+    &:link,
+    &:visited {
+        color: var(--primary);
+        text-decoration: none;
+        
+        &:hover {
+            opacity: .8;
+        }
+    } 
+}

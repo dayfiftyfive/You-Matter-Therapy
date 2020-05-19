@@ -1,4 +1,41 @@
 // 1. SCSS Color Variables
+$primary: #A8D7B0;
+$secondary: #309975;
+$tertiary: #DAD873;
+
+$font-color: #3F3D56;
+$bg-color: #fff;
+
+$bg-color-dark-theme: #282828;
+$font-color-dark-theme: #fff;
 
 
 // 2. CSS Color Variables
+:root {
+
+    --primary: #{$primary};
+    --secondary: #{$secondary};
+    --tertiary: #{$tertiary};
+    --font-color: #{$font-color};
+    --bg-color: #{$bg-color};
+
+    @media (prefers-color-scheme: dark) {
+        --font-color: #{$font-color-dark-theme};
+        --bg-color: #{$bg-color-dark-theme};
+    }
+
+}
+
+
+// 4. Font Variables
+$body-font: 'Nunito Sans', 'Arial', sans-serif;
+$heading-font: 'Poppins', 'Verdana', sans-serif;
+$quote-font: 'Arapey', 'Times', serif;
+
+
+// 4. Other Variables
+:root {
+
+    --block-radius: 4rem;
+
+}

@@ -1,0 +1,99 @@
+.navbar {
+
+    padding: 6rem 0;
+
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__brand {
+        flex-grow: 1;
+
+        a, a:link, a:visited {
+            font-family: $quote-font;
+            font-size: 2.4rem;
+            font-weight: 400;
+
+            color: var(--secondary);
+
+            span {
+                color: var(--font-color);
+            }
+        }
+
+        
+    }
+
+    &__link {
+
+        &, &:link, &:visited {
+
+            margin-right: 5rem;
+            font-weight: 600;
+            font-size: 1.4rem;
+
+            color: var(--font-color);
+
+        }
+        
+    }
+
+    &__button {
+        font-size: 1.4rem;
+        
+        &, &:link, &:visited {
+            color: var(--secondary);
+        }
+    }
+
+
+    &__icon {
+
+        height: 6rem;
+        width: 6rem;
+        padding: 1rem;
+
+        cursor: pointer;
+        transition: all .2s ease-in;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        display: none;
+
+        &::before, &::after {
+            content: '';
+            height: 4px;
+            background-color: var(--font-color);
+            display: block;
+            position: relative;
+            transition: all .2s ease-in;
+        }
+
+        &::before {
+            width: 100%;
+        }
+
+        &::after {
+            width: 75%;
+            margin-top: .8rem;
+            margin-left: auto;
+        }
+
+        &:hover {
+
+            &::before {
+                width: 75%;
+            }
+
+            &::after {
+                width: 100%;
+            }
+
+        }
+    }
+
+}

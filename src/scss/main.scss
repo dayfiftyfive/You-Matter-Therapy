@@ -4,12 +4,14 @@
 
 
 // 2. Import Base Items
-@import 'base/base';
+@import 'base/html';
 @import 'base/typography';
 
 
 // 3. Import Components
 @import 'components/buttons';
+@import 'components/divider';
+@import 'components/hero';
 
 
 // 4. Import Layout
@@ -22,3 +24,4 @@
 @import 'pages/about';
 @import 'pages/contact';
 @import 'pages/services';
+@import 'pages/pricing';
