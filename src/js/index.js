@@ -1,3 +1,5 @@
-const rellax = new Rellax('.rellax', {
-    speed: -1
-  });
+// 1. Import SCSS Styles
+import '../scss/main.scss';
+
+
+// 2. 
