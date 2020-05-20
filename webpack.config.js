@@ -44,12 +44,14 @@ module.exports = {
             filename: 'about/index.html',
             template: './src/pages/about.html'
         }),
+
         new MiniCssExtractPlugin({
             filename: "assets/css/bundle.css"
         })
     ],
     module: {
         rules: [
+
             // JS Test Rules
             {
                 test: /\.js$/,
@@ -119,6 +121,7 @@ module.exports = {
                     }
                 ]
             }
+            
         ]
     }
 };

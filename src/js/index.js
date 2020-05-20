@@ -2,4 +2,6 @@
 import '../scss/main.scss';
 
 
-// 2. 
+import LocomotiveScroll from 'locomotive-scroll';
+
+const scroll = new LocomotiveScroll();

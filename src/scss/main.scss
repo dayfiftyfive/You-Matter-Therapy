@@ -8,18 +8,22 @@
 @import 'base/typography';
 
 
-// 3. Import Components
+// 3. Import Vendor Items
+@import 'vendor/locomotive';
+
+
+// 4. Import Components
 @import 'components/buttons';
 @import 'components/divider';
 @import 'components/hero';
 
 
-// 4. Import Layout
+// 5. Import Layout
 @import 'layout/nav';
 @import 'layout/footer';
 
 
-// 5. Import Pages
+// 6. Import Pages
 @import 'pages/home';
 @import 'pages/about';
 @import 'pages/contact';
