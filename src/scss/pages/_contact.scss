@@ -3,13 +3,28 @@
     &__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5rem;
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__form {
         
         background-image: linear-gradient(-135deg, var(--primary), var(--secondary));
-        border-radius: var(--block-radius);
+        border-radius: calc( var(--block-radius) * .75 );
         padding: 6rem 5rem;
+
+        @include respond(phone) {
+            padding: 6rem 3rem;
+        }
+        
+        @include respond(iphone) {
+            padding: 6rem 2rem;
+        }
+
+        margin-top: 5rem;
 
         color: #fff;
 
@@ -29,16 +44,100 @@
         input {
             border: none;
             border-radius: .5rem;
-            height: 3.5rem;
+            height: 4.5rem;
             display: block;
-            width: 30rem;
-            padding: 1rem;
+            width: 75%;
+            padding: 1rem 2rem;
+
+            @include respond(tab-land) {
+                width: 100%;
+            }
+
+            @include respond(tab-port) {
+                width: 75%;
+            }
+
+            @include respond(phone) {
+                width: 100%;
+            }
 
             &:focus {
                 outline: none;
             }
         }
 
+        textarea {
+            border: none;
+            border-radius: .5rem;
+            display: block;
+            width: 100%;
+            padding: 1rem 2rem;
+
+            margin-bottom: 5rem;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        input, textarea {
+            font-size: 1.6rem;
+            font-family: $body-font;
+
+            &:placeholder-shown, &::placeholder {
+                color: rgb(194, 194, 194);
+            }
+        }
+
+
+        button.btn {
+            background-color: transparent;
+            color: #fff;
+            font-size: 1.6rem;
+        }
+
+    }
+
+    &__phone {
+        font-weight: 200;
+        font-size: 2.6rem;
+        margin-top: 2rem;
+    }
+
+    &__appointment {
+        background-color: $font-color;
+        border-radius: calc( var(--block-radius) * .75 );
+        padding: 8rem 5rem;
+
+        color: #fff;
+
+        p.overview__text {
+            margin-bottom: 6rem;
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-image {
+            margin-top: 15rem;
+            display: flex;
+            justify-content: center;
+
+            @include respond(tab-port) {
+                margin-top: 10rem;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+
+                @include respond(tab-port) {
+                    width: 60%;
+                }
+            }
+        }
     }
 
 }

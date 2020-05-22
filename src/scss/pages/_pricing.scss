@@ -1,7 +1,5 @@
 .pricing {
 
-    margin: 20rem 0 40rem 0;
-
 
     &__hero {
         margin-bottom: 10rem;
@@ -13,6 +11,14 @@
         .quote__text {
             line-height: 1.7;
             font-size: 3rem;
+
+            @include respond(tab-land) {
+                font-size: 2.4rem;
+            }
+
+            @include respond(phone) {
+                font-size: 2rem;
+            }
         }
     }
 
@@ -20,7 +26,18 @@
         margin-top: 15rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 6rem;
+        grid-gap: 5rem;
+
+        @include respond(tab-land) {
+            grid-column-gap: 4rem;
+            grid-row-gap: 20rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+            grid-row-gap: 10rem;
+        }
     }
 
 }
@@ -36,6 +53,7 @@
         font-size: 2.8rem;
         font-weight: 400;
         margin-bottom: 2rem;
+        line-height: 1.4;
     }
 
     &__list {
@@ -63,6 +81,10 @@
     &--pricing {
         background-image: linear-gradient(-135deg, var(--primary), var(--secondary));
 
+        @include respond(iphone) {
+            padding-bottom: 8rem;
+        }
+
         .card__title {
             margin-bottom: 0;
         }
@@ -72,6 +94,13 @@
             width: calc( 100% + 5rem );
             left: -2.5rem;
             bottom: -10rem;
+
+            @include respond(phone) {
+                width: 50%;
+                left: auto;
+                right: 0;
+                bottom: -4rem;
+            }
         }
     }
 
@@ -94,6 +123,10 @@
 .cost {
     font-weight: 200;
     font-size: 4.4rem;
+
+    @include respond(tab-port) {
+        font-size: 3.8rem;
+    }
 
     &__subtitle {
         font-weight: 400;

@@ -1,12 +1,19 @@
 .services {
 
-    margin: 25rem 0;
     padding-top: 5rem;
     
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 15rem;
-    grid-row-gap: 15rem;
+    grid-column-gap: 10rem;
+    grid-row-gap: 10rem;
+
+    @include respond(tab-land) {
+        grid-column-gap: 5rem;
+    }
+
+    @include respond(tab-port) {
+        grid-template-columns: 1fr;
+    }
 
     &__hero {
 
@@ -14,11 +21,10 @@
         background-image: linear-gradient(-135deg, var(--primary), var(--secondary));
         color: #fff;
 
+        margin-bottom: 5rem;
+
         display: flex;
         justify-content: space-between;
-
-        grid-row: 1 / 2;
-        grid-column: 1 / -1;
         
 
         h3 {
@@ -27,8 +33,16 @@
 
         h2 {
             font-size: 4.8rem;
-            line-height: 1.1;
+            line-height: 1.3;
             margin-bottom: 2rem;
+
+            @include respond(tab-port) {
+                font-size: 4.4rem;
+            }
+
+            @include respond(phone) {
+                font-size: 4rem;
+            }
         }
 
         hr.divider {
@@ -43,11 +57,32 @@
 
         &-content {
             padding: 8rem 0 8rem 8rem;
+
+            @include respond(tab-port) {
+                padding: 8rem 6rem;
+            }
+
+            @include respond(phone) {
+                padding: 5rem 3rem;
+            }
         }
 
         &-illustration {
+
+            display: flex;
+            align-items: center;
+
+            max-width: 50%;
             img {
                 max-height: 100%;
+
+                @include respond(tab-land) {
+                    max-height: 65%;
+                }
+
+                @include respond(tab-port) {
+                    display: none;
+                }
             }
         }
 
@@ -56,6 +91,15 @@
     &__title {
         color: var(--secondary);
         font-size: 3.6rem;
+        line-height: 1.4;
+
+        @include respond(tab-port) {
+            font-size: 3.2rem;
+        }
+
+        @include respond(phone) {
+            font-size: 3rem;
+        }
     }
 
     &__aside {
@@ -71,6 +115,127 @@
         li {
             line-height: 2;
         }
+    }
+
+    &__text {
+        line-height: 2.2;
+    }
+
+
+    &__quote {
+
+        margin-bottom: 1.5rem;
+
+        p {
+            font-family: $quote-font;
+
+            &:first-child {
+                font-size: 2.2rem;
+                font-style: italic;
+            }
+        }
+
+    }
+
+    
+    &__shapes {
+
+        height: 100%;
+        width: 100%;
+
+        position: relative;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+
+        div {
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .first {
+            height: 25rem;
+            width: 25rem;
+
+            top: calc(50% - 8.5rem);
+            left: calc(50% - 7.5rem);
+
+            background-color: $font-color;
+        }
+
+        .second {
+            height: 20rem;
+            width: 20rem;
+
+            top: calc(50% - 14rem);
+            left: calc(50% - 15rem);
+
+            background-image: linear-gradient(-135deg, var(--tertiary), var(--primary));
+        }
+
+    }
+
+
+    &__card {
+
+        background-color: orange;
+        padding: 5rem 6rem;
+        border-radius: calc( var(--block-radius) * .75 );
+        color: #fff;
+
+        @include respond(tab-land) {
+            padding: 5rem 4rem;
+        }
+
+        &--1 {
+            background-color: $font-color;
+        }
+        
+        &--2 {
+            background-image: linear-gradient(-135deg, var(--primary), var(--secondary));
+        }
+
+        &--3 {
+            background-image: linear-gradient(-135deg, var(--tertiary), var(--primary));
+            hr.divider {
+                background-color: var(--tertiary);
+            }
+        }
+
+        h2, h3 {
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 3.6rem;
+
+            @include respond(tab-port) {
+                font-size: 3.2rem;
+            }
+
+            @include respond(phone) {
+                font-size: 3rem;
+            }
+        }
+
+        h3 {
+            font-size: 2.4rem;
+        }
+
+        ul {
+            list-style: none;
+            columns: 2;
+        }
+
+        li {
+            margin-bottom: .75rem;
+            @include respond(iphone) {
+                font-size: 1.4rem;
+            }
+        }
+        
     }
 
 }

@@ -4,20 +4,43 @@
     background-image: linear-gradient(-135deg, var(--tertiary), var(--primary));
 
     border-radius: var(--block-radius);
-
-    display: flex;
-    justify-content: space-between;
+    position: relative;
 
     &__content {
         padding: 8rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        position: relative;
+        z-index: 10;
+
+        @include respond(tab-port) {
+            padding-bottom: 30rem;
+        }
+
+        @include respond(phone) {
+            padding: 8rem 4rem 20rem 4rem;
+        }
     }
 
     &__jumbo {
         font-size: 13rem;
         line-height: 1.1;
+
+        @include respond(tab-port) {
+            font-size: 10rem;
+        }
+
+        @include respond(phone) {
+            font-size: 7.5rem;
+        }
+
+        span {
+            display: block;
+            @include respond(tab-port) {
+                display: inline;
+            }
+        }
     }
 
     &__subtitle {
@@ -45,14 +68,35 @@
     }
 
     &__illustration {
+        position: absolute;
+        height: 100%;
+
+        bottom: 0;
+        right: 0;
+
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        align-items: flex-end;
+        
 
         img {
             display: block;
-            max-height: 100%;
-            transform: translate(4rem, 8rem);
+            max-height: 90%;
+            transform: translate(8rem, 8rem);
+
+            @include respond(tab-land) {
+                height: 75%;
+            }
+
+            @include respond(tab-port) {
+                height: 45rem;
+                transform: translate(4rem, 8rem);
+            }
+
+            @include respond(phone) {
+                transform: translate(2rem, 10rem);
+                height: auto;
+                width: 100%;
+            }
         }
     }
 
@@ -68,9 +112,17 @@
     grid-column-gap: 5rem;
     grid-row-gap: 10rem;
 
+    @include respond(tab-port) {
+        grid-template-columns: 1fr;
+    }
+
 
     &__quote {
         grid-column: 1 / -1;
+
+        @include respond(tab-port) {
+            grid-row: 3 / 4;
+        }
     }
 
 
@@ -82,6 +134,15 @@
         img {
             width: 80%;
             user-select: none;
+
+            @include respond(tab-port) {
+                width: 60%;
+            }
+        }
+
+        @include respond(tab-port) {
+            grid-row: 2 / 3;
+            justify-content: center;
         }
 
     }

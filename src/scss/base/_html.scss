@@ -25,8 +25,35 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
     background-color: var(--bg-color);
+    width: 100vw;
 
     padding: 0 15rem;
+
+    @include respond(desktop) {
+        padding: 0 12rem;
+    }
+
+    @include respond(laptop) {
+        padding: 0 10rem;
+    }
+
+    @include respond(tab-land) {
+        padding: 0 9rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 0 7.5rem;
+    }
+
+    @include respond(phone) {
+        padding: 0 4rem;
+    }
+
+    @include respond(iphone) {
+        padding: 0 2rem;
+    }
+
+
 }
 
 ::selection {

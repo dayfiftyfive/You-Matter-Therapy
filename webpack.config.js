@@ -116,7 +116,7 @@ module.exports = {
                         // In options we can set different things like format
                         // and directory to save
                         options: {
-                            outputPath: 'assets/img'
+                            outputPath: '/assets/img'
                         }
                     }
                 ]

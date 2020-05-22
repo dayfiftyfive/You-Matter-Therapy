@@ -38,4 +38,8 @@ $quote-font: 'Arapey', 'Times', serif;
 
     --block-radius: 4rem;
 
+    @include respond(phone) {
+        --block-radius: 3rem;
+    }
+
 }

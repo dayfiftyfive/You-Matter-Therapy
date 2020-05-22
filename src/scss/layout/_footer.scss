@@ -11,6 +11,14 @@
     align-items: center;
     justify-content: space-between;
 
+    @include respond(tab-port) {
+        padding: 7rem 4rem;
+    }
+
+    @include respond(phone) {
+        display: block;
+    }
+
     &__brand {
         font-size: 4.4rem;
     }
@@ -23,25 +31,60 @@
             color: #fff;
             text-transform: uppercase;
             letter-spacing: .2em;
-            margin-top: 3rem;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__badge {
+        transition: all .2s ease-in;
+        &, &:link, &:visited {
+            color: #fff;
+
+            &:hover {
+                color: var(--primary);
+            }
         }
     }
 
     &__copy {
-        margin-top: 1rem;
         opacity: .35;
+    }
+
+    &__hero {
+        margin-right: 4rem;
+        width: max-content;
+
+        @include respond(phone) {
+            margin-bottom: 4rem;
+        }
     }
 
     &__nav {
         list-style: none;
         display: flex;
 
+        @include respond(laptop) {
+            display: block;
+            columns: 2;
+        }
+
+        @include respond(tab-port) {
+            columns: 1;
+        }
+
         li {
             font-size: 2rem;
             font-family: $heading-font;
             &:not(:last-child) {
                 margin-right: 4rem;
+
+                @include respond(laptop) {
+                    margin-right: 0;
+                }
+
+                @include respond(tab-port) {
+                    margin-bottom: 1rem;
+                }
             }
 
             & > a {
