@@ -7,21 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="icon" href='/assets/img/favicon/favicon.ico' type='image/x-icon'>
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+
+
     <!-- Page Title -->
-    <title>You Matter Therapy &ndash; Numra Yaqub, LMHC</title>
+    <title>Contact Me &ndash; You Matter Therapy</title>
 
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Nunito+Sans:ital@0;1&family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body data-scroll-container>
 
     <!-- Navbar -->
     <nav class="navbar">
 
         <!-- Navbar Logo -->
-        <h5 class="navbar__brand"><a href="../">You Matter Therapy<span class="vert">|</span><span>Numra Yaqub</span></a></h5>
+        <h5 class="navbar__brand"><a href="../">You Matter Therapy<span class="vert">|</span><span>Numra Yaqub, LMHC</span></a></h5>
 
         <!-- Checkbox To Drive Functionality -->
         <input type="checkbox" class="navbar__checkbox" style="display: none" id="nav-checkbox">
@@ -34,7 +42,7 @@
             <a href="../pricing" class="navbar__link">Pricing</a>
             <a href="../about" class="navbar__link">About Me</a>
             <a href="#" class="navbar__link active">Contact Me</a>
-            <a href="https://square.site/book/0BH36T7RHG3Z8/day-fiftyfive-llc-orlando-fl-fl" target="_blank" rel="nofollow" class="navbar__button btn">Make An Appointment</a>
+            <a href="#make-appointment" rel="nofollow" class="navbar__button btn">Make An Appointment</a>
 
         </div>
 
@@ -44,87 +52,98 @@
     </nav>
 
 
-    <header class="pricing__hero section-hero">
+    <!-- Main Content Block -->
+    <main>
 
-        <div class="section-hero__content">
-            <h3>Contact</h3>
-            <hr class="divider">
-            <h2>Talk To Me</h2>
-            <h4>Contact me for free consultation.</h4>
-        </div>
+        <!-- Header Section -->
+        <header class="pricing__hero section-hero" data-scroll-section>
 
-        <div class="section-hero__illustration">
-            <img src="../img/sofa.svg" alt="Contact Me Illustration">
-        </div>
-
-    </header>
-
-
-    <!-- Contact Me Section -->
-    <section class="contact" id="contact">
-
-    
-        <div class="contact__grid">
-
-            <div class="contact__info">
-
-                <h2 class="about__title">Call or Email Me</h2>
+            <div class="section-hero__content">
+                <h3>Contact</h3>
                 <hr class="divider">
-                <p class="contact__text">
-                    Please fill out the contact form below if you would like to schedule a free 15-minute phone consultation. We can start talking about you today. 
-                </p>
+                <h2>Talk To Me</h2>
+                <h4>Contact me for free consultation.</h4>
+            </div>
 
-                <h3 class="contact__phone">(609) 751-9209</h3>
+            <div class="section-hero__illustration">
+                <img src="../img/sofa.svg" alt="Contact Me Illustration" data-scroll data-scroll-speed="1">
+            </div>
 
-                <form id="contact-form" class="contact__form">
+        </header>
 
-                    <label>
-                        <h4>Your Name</h4>
-                        <input type="text" placeholder="You Matter">
-                    </label>
-                    
-                    <label>
-                        <h4>Email Address</h4>
-                        <input type="email" placeholder="talk@youmattertherapy.care">
-                    </label>
-                    
-                    <label>
-                        <h4>Phone Number (Optional)</h4>
-                        <input type="text" placeholder="(609) 751-9209">
-                    </label>
-                    
-                    <label>
-                        <h4>Say Something</h4>
-                        <textarea rows="10" placeholder="Let's start talking about you..."></textarea>
-                    </label>
 
-                    <button class="btn">Send Message</button>
+        <!-- Contact Me Section -->
+        <section class="contact" id="contact" data-scroll-section>
 
-                </form>
+        
+            <div class="contact__grid">
+
+                <div class="contact__info">
+
+                    <h2 class="about__title">Call or Email Me</h2>
+                    <hr class="divider">
+                    <p class="contact__text">
+                        Please fill out the contact form below if you would like to schedule a free 15-minute phone consultation. We can start talking about you today. 
+                    </p>
+
+                    <h3 class="contact__phone">(609) 751-9209</h3>
+
+                    <form id="contact-form" class="contact__form">
+
+                        <label>
+                            <h4 id="name-error">Your Name</h4>
+                            <input type="text" placeholder="You Matter" id="name-input">
+                        </label>
+                        
+                        <label>
+                            <h4 id="email-error">Email Address</h4>
+                            <input type="email" placeholder="talk@youmattertherapy.care" id="email-input">
+                        </label>
+                        
+                        <label>
+                            <h4>Phone Number (Optional)</h4>
+                            <input type="tel" placeholder="(609) 751-9209" id="phone-input">
+                        </label>
+                        
+                        <label>
+                            <h4 id="message-error">Say Something</h4>
+                            <textarea rows="10" placeholder="Let's start talking about you..." id="message-input"></textarea>
+                        </label>
+
+                        <button class="btn" id="send-message">Send Message</button>
+
+                        <div class="contact__confirm">
+                            <h2>Your Message was Sent!</h2>
+                            <p>I'll get back to you as soon as possible so we can start talking about YOU.</p>
+                            <img src="../img/sent.svg" alt="Message Sent Image">
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <div class="contact__appointment-block">
+
+                    <div class="contact__appointment">
+                        <h2>Make An Appointment Today</h2>
+                        <p class="overview__text">Make an appointment or schedule your free consultation today. Let's start talking about you.</p>
+                        <a target="_blank" href="#make-appointment" rel="nofollow" class="btn">Make An Appointment</a>
+                    </div>
+
+                    <div class="contact__appointment-image">
+                        <img src="../img/booked.svg" alt="Booking Image" data-scroll data-scroll-speed="-1">
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="contact__appointment-block">
+        </section>
 
-                <div class="contact__appointment">
-                    <h2>Make An Appointment Today</h2>
-                    <p class="overview__text">Make an appointment or schedule your free consultation today. Let's start talking about you.</p>
-                    <a target="_blank" href="https://square.site/book/0BH36T7RHG3Z8/day-fiftyfive-llc-orlando-fl-fl" rel="nofollow" class="btn">Make An Appointment</a>
-                </div>
-
-                <div class="contact__appointment-image">
-                    <img src="../img/booked.svg" alt="Booking Image">
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
+    </main>
 
     <!-- Footer Class -->
-    <footer class="footer">
+    <footer class="footer" data-scroll-section>
 
         <div class="footer__hero">
             <h2 class="footer__brand">You Matter.</h2>
@@ -139,10 +158,49 @@
             <li><a href="../pricing">Pricing</a></li>
             <li><a href="../about">About Me</a></li>
             <li><a href="#">Contact Me</a></li>
-            <li><a href="https://square.site/book/0BH36T7RHG3Z8/day-fiftyfive-llc-orlando-fl-fl" target="_blank" rel="nofollow">Make an Appointment</a></li>
+            <li><a href="#make-appointment" rel="nofollow">Make an Appointment</a></li>
         </ul>
         
     </footer>
-    
+
+
+    <!-- Booking Popup -->
+    <section class="popup" id="make-appointment">
+        <a href="#" class="popup__exit close-popup"></a>
+        <div class="popup__window">
+
+            <div class="popup__nav">
+                <a href="#" class="close-popup">&times;</a>
+            </div>
+
+            <div class="popup__iframe">
+                <script src='https://square.site/appointments/buyer/widget/gs8wgtnkx0ybf2/05JM4HD2SM3GQ.js'></script>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Free Consultation Popup -->
+    <section class="popup" id="free-consultation">
+
+        <a href="#" class="popup__exit close-popup"></a>
+
+        <div class="popup__window popup__window--small">
+
+            <div class="popup__nav">
+                <a href="#" class="close-popup">&times;</a>
+            </div>
+
+            <div class="popup__content">
+                <h2>Free Consultation</h2>
+                <p>Contact me now for a free 15 minute phone consultation.</p>
+                <a href="../contact" class="btn">Contact Me</a>
+            </div>
+
+        </div>
+
+    </section>
+
 </body>
 </html>

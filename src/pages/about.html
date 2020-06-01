@@ -7,8 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="icon" href='/assets/img/favicon/favicon.ico' type='image/x-icon'>
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+
+
     <!-- Page Title -->
-    <title>You Matter Therapy &ndash; Numra Yaqub, LMHC</title>
+    <title>About Me &ndash; You Matter Therapy</title>
 
 
     <!-- Fonts -->
@@ -16,13 +24,13 @@
 
 
 </head>
-<body>
+<body data-scroll-container>
 
     <!-- Navbar -->
     <nav class="navbar">
 
         <!-- Navbar Logo -->
-        <h5 class="navbar__brand"><a href="../">You Matter Therapy<span class="vert">|</span><span>Numra Yaqub</span></a></h5>
+        <h5 class="navbar__brand"><a href="../">You Matter Therapy<span class="vert">|</span><span>Numra Yaqub, LMHC</span></a></h5>
 
         <!-- Checkbox To Drive Functionality -->
         <input type="checkbox" class="navbar__checkbox" style="display: none" id="nav-checkbox">
@@ -35,7 +43,7 @@
             <a href="../pricing" class="navbar__link">Pricing</a>
             <a href="#" class="navbar__link active">About Me</a>
             <a href="../contact" class="navbar__link">Contact Me</a>
-            <a href="https://square.site/book/0BH36T7RHG3Z8/day-fiftyfive-llc-orlando-fl-fl" target="_blank" rel="nofollow" class="navbar__button btn">Make An Appointment</a>
+            <a href="#make-appointment" rel="nofollow" class="navbar__button btn">Make An Appointment</a>
 
         </div>
 
@@ -44,10 +52,12 @@
 
     </nav>
 
-    <main data-scroll-container>
+
+    <!-- Main Content Container -->
+    <main>
 
         <!-- Page Header -->
-        <header class="about__hero section-hero">
+        <header class="about__hero section-hero" data-scroll-section>
 
             <div class="section-hero__content">
                 <h3>About Me</h3>
@@ -57,18 +67,18 @@
             </div>
     
             <div class="about__img">
-                <div class="about__circle"></div>
-                <img src="../img/numra.jpg" alt="Picture Of Me">
+                <div class="about__circle" data-scroll data-scroll-speed="-1"></div>
+                <img src="../img/numra.jpg" alt="Picture Of Me" data-scroll data-scroll-speed="1">
             </div>
     
         </header>
 
 
         <!-- About Me Section -->
-        <section class="about" id="about">
+        <section class="about" id="about" data-scroll-section>
 
             <!-- About Content -->
-            <div class="about__content">
+            <div class="about__content" data-scroll>
 
                 <p class="overview__text">
                     Hello and Welcome! My name is Numra Yaqub. I am originally from New Jersey, where I obtained my Bachelor’s in Psychology at Stockton University. I then moved to Bethlehem, Pennsylvania to obtain my Master’s degree in Counseling and Human Services at Lehigh University. During my time in the Lehigh Valley area, I worked at an inpatient psychiatric facility, where I began to gain experience in working with children, adolescents, and adults with a mental health diagnosis. During that time, I also completed my internship at Kutztown University, providing counseling services to college students.
@@ -88,8 +98,8 @@
             <div class="about__grid">
 
                 <div class="about__shapes">
-                    <div class="first"></div>
-                    <div class="second"></div>
+                    <div class="first" data-scroll data-scroll-speed="-1"></div>
+                    <div class="second" data-scroll data-scroll-speed="1"></div>
                 </div>
 
                 <div class="about__content">
@@ -127,7 +137,7 @@
 
 
     <!-- Footer Class -->
-    <footer class="footer">
+    <footer class="footer" data-scroll-section>
 
         <div class="footer__hero">
             <h2 class="footer__brand">You Matter.</h2>
@@ -142,10 +152,50 @@
             <li><a href="../pricing">Pricing</a></li>
             <li><a href="#">About Me</a></li>
             <li><a href="../contact">Contact Me</a></li>
-            <li><a href="https://square.site/book/0BH36T7RHG3Z8/day-fiftyfive-llc-orlando-fl-fl" target="_blank" rel="nofollow">Make an Appointment</a></li>
+            <li><a href="#make-appointment" rel="nofollow">Make an Appointment</a></li>
         </ul>
         
     </footer>
+
+
+    <!-- Booking Popup -->
+    <section class="popup" id="make-appointment">
+        <a href="#" class="popup__exit close-popup"></a>
+        <div class="popup__window">
+
+            <div class="popup__nav">
+                <a href="#" class="close-popup">&times;</a>
+            </div>
+
+            <div class="popup__iframe">
+                <script src='https://square.site/appointments/buyer/widget/gs8wgtnkx0ybf2/05JM4HD2SM3GQ.js'></script>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Free Consultation Popup -->
+    <section class="popup" id="free-consultation">
+
+        <a href="#" class="popup__exit close-popup"></a>
+
+        <div class="popup__window popup__window--small">
+
+            <div class="popup__nav">
+                <a href="#" class="close-popup">&times;</a>
+            </div>
+
+            <div class="popup__content">
+                <h2>Free Consultation</h2>
+                <p>Contact me now for a free 15 minute phone consultation.</p>
+                <a href="../contact" class="btn">Contact Me</a>
+            </div>
+
+        </div>
+
+    </section>
+
     
 </body>
 </html>

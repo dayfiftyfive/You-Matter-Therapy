@@ -1,0 +1,133 @@
+.popup {
+
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100000;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(#000, .8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all .3s ease-in;
+
+    &:target {
+
+        opacity: 1;
+        pointer-events: all;
+
+        .popup__window {
+            transform: scale(1);
+            & > * { opacity: 1; }
+        }
+
+    }
+
+    &__exit {
+        display: block;
+        height: 100%;
+        width: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background-color: transparent;
+        
+        cursor: default;
+    }
+
+    &__window {
+        position: relative;
+
+        height: 90%;
+        width: 90%;
+
+        background-color: var(--bg-color);
+        border-radius: calc( var(--block-radius) * .75 );
+        padding: 2rem 5rem 8rem 5rem;
+
+        & > * { opacity:  0; }
+        transform: scale(.9);
+
+        transition: all .3s ease-in;
+
+        display: flex;
+        flex-direction: column;
+
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &--small {
+            height: auto;
+            width: 50%;
+            border-radius: calc( var(--block-radius) * .65 );
+        }
+
+        @include respond(phone) {
+            height: 100%;
+            width: 100%;
+            border-radius: 0;
+            padding: 2rem 3rem;
+        }
+
+        @include respond(iphone) {
+            padding: 2rem 1.5rem;
+        }
+    }
+
+    &__iframe {
+        flex-grow: 1;
+    }
+
+    &__content {
+        padding: 2rem 0;
+
+        h2 {
+            color: var(--secondary);
+            font-size: 4rem;
+        }
+
+        p {
+            margin-bottom: 4rem;
+            color: var(--font-color);
+            font-size: 1.8rem;
+        }
+
+        a, a:link, a:visited {
+            color: var(--secondary);
+            &:hover {
+                background-color: var(--secondary);
+                border-color: var(--secondary);
+                color: #fff;
+            }
+        }
+    }
+
+    &__nav {
+
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 3rem;
+
+        a, a:link, a:visited {
+            display: block;
+            font-size: 5rem;
+            line-height: 1;
+            color: $font-color;
+            cursor: pointer;
+        }
+
+    }
+
+}

@@ -2,6 +2,19 @@
 import '../scss/main.scss';
 
 
-import LocomotiveScroll from 'locomotive-scroll';
+// 2. Import Components
+import Scroll from './Scroll';
+import Popup from './Popup';
+import ContactForm from './Contact';
 
-const scroll = new LocomotiveScroll();
+
+// 3. Create Instances
+const scroll = new Scroll();
+const popup = new Popup();
+const form = new ContactForm();
+
+
+// 4. Initialize Objects
+scroll.init();
+popup.init();
+form.init();

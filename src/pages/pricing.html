@@ -6,9 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="icon" href='/assets/img/favicon/favicon.ico' type='image/x-icon'>
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+
 
     <!-- Page Title -->
-    <title>You Matter Therapy &ndash; Numra Yaqub, LMHC</title>
+    <title>Pricing &ndash; You Matter Therapy</title>
 
 
     <!-- Fonts -->
@@ -16,13 +23,13 @@
 
 
 </head>
-<body>
+<body data-scroll-container>
 
     <!-- Navbar -->
     <nav class="navbar">
 
         <!-- Navbar Logo -->
-        <h5 class="navbar__brand"><a href="../">You Matter Therapy<span class="vert">|</span><span>Numra Yaqub</span></a></h5>
+        <h5 class="navbar__brand"><a href="../">You Matter Therapy<span class="vert">|</span><span>Numra Yaqub, LMHC</span></a></h5>
 
         <!-- Checkbox To Drive Functionality -->
         <input type="checkbox" class="navbar__checkbox" style="display: none" id="nav-checkbox">
@@ -35,7 +42,7 @@
             <a href="#" class="navbar__link active">Pricing</a>
             <a href="../about" class="navbar__link">About Me</a>
             <a href="../contact" class="navbar__link">Contact Me</a>
-            <a href="https://square.site/book/0BH36T7RHG3Z8/day-fiftyfive-llc-orlando-fl-fl" target="_blank" rel="nofollow" class="navbar__button btn">Make An Appointment</a>
+            <a href="#make-appointment" rel="nofollow" class="navbar__button btn">Make An Appointment</a>
 
         </div>
 
@@ -44,12 +51,13 @@
 
     </nav>
 
-    <main data-scroll-container>
+    <!-- Main Container -->
+    <main>
 
         <!-- Page Header -->
-        <header class="pricing__hero section-hero">
+        <header class="pricing__hero section-hero" data-scroll-section>
 
-            <div class="section-hero__content">
+            <div class="section-hero__content" data-scroll>
                 <h3>Pricing</h3>
                 <hr class="divider">
                 <h2>Flexible Pricing</h2>
@@ -60,28 +68,28 @@
                 </div>
             </div>
     
-            <div class="section-hero__illustration">
+            <div class="section-hero__illustration" data-scroll data-scroll-speed="1">
                 <img src="../img/chill.svg" alt="Chill Illustration">
             </div>
     
         </header>
     
         <!-- Pricing Section -->
-        <section class="pricing" id="pricing">
+        <section class="pricing" id="pricing" data-scroll-section>
     
             <div class="pricing__cards">
     
-                <div class="card card--pricing">
+                <div class="card card--pricing" data-scroll>
     
                     <h3 class="card__title">Sliding Scale</h3>
                     <h2 class="cost">$80 - $200</h2>
                     <h4 class="cost__subtitle">Per Session</h4>
     
-                    <img src="../img/payment.svg" alt="Payment Icon">
+                    <img src="../img/payment.svg" alt="Payment Icon" data-scroll data-scroll-speed="1">
     
                 </div>
                 
-                <div class="card card--options">
+                <div class="card card--options" data-scroll>
     
                     <h3 class="card__title">Accepted Payment Methods</h3>
                     <p class="insurance">I am currently accepting Cigna and United Healthcare</p>
@@ -97,7 +105,7 @@
     
                 </div>
                 
-                <div class="card card--discounts">
+                <div class="card card--discounts" data-scroll>
     
                     <h3 class="card__title">Reduced Rates</h3>
                     <p>
@@ -115,7 +123,7 @@
 
 
     <!-- Footer Class -->
-    <footer class="footer">
+    <footer class="footer" data-scroll-section>
 
         <div class="footer__hero">
             <h2 class="footer__brand">You Matter.</h2>
@@ -130,10 +138,49 @@
             <li><a href="#">Pricing</a></li>
             <li><a href="../about">About Me</a></li>
             <li><a href="../contact">Contact Me</a></li>
-            <li><a href="https://square.site/book/0BH36T7RHG3Z8/day-fiftyfive-llc-orlando-fl-fl" target="_blank" rel="nofollow">Make an Appointment</a></li>
+            <li><a href="#make-appointment" rel="nofollow">Make an Appointment</a></li>
         </ul>
         
     </footer>
+    
+
+    <!-- Booking Popup -->
+    <section class="popup" id="make-appointment">
+        <a href="#" class="popup__exit close-popup"></a>
+        <div class="popup__window">
+
+            <div class="popup__nav">
+                <a href="#" class="close-popup">&times;</a>
+            </div>
+
+            <div class="popup__iframe">
+                <script src='https://square.site/appointments/buyer/widget/gs8wgtnkx0ybf2/05JM4HD2SM3GQ.js'></script>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Free Consultation Popup -->
+    <section class="popup" id="free-consultation">
+
+        <a href="#" class="popup__exit close-popup"></a>
+
+        <div class="popup__window popup__window--small">
+
+            <div class="popup__nav">
+                <a href="#" class="close-popup">&times;</a>
+            </div>
+
+            <div class="popup__content">
+                <h2>Free Consultation</h2>
+                <p>Contact me now for a free 15 minute phone consultation.</p>
+                <a href="../contact" class="btn">Contact Me</a>
+            </div>
+
+        </div>
+
+    </section>
     
 </body>
 </html>

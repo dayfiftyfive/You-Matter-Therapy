@@ -10,11 +10,14 @@
         }
     }
 
+
     &__form {
         
         background-image: linear-gradient(-135deg, var(--primary), var(--secondary));
         border-radius: calc( var(--block-radius) * .75 );
         padding: 6rem 5rem;
+
+        position: relative;
 
         @include respond(phone) {
             padding: 6rem 3rem;
@@ -28,11 +31,23 @@
 
         color: #fff;
 
+        &.sent {
+            label, button {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+
         label {
             display: block;
+            transition: all .3s ease-in;
 
             h4 {
                 margin-bottom: 0.5rem;
+
+                span {
+                    color: $font-color;
+                }
             }
 
             &:not(:last-child) {
@@ -44,10 +59,12 @@
         input {
             border: none;
             border-radius: .5rem;
-            height: 4.5rem;
+            height: 5rem;
             display: block;
             width: 75%;
             padding: 1rem 2rem;
+            border-left: 4px solid rgb(207, 207, 207);
+            transition: all .2s ease-in;
 
             @include respond(tab-land) {
                 width: 100%;
@@ -63,6 +80,11 @@
 
             &:focus {
                 outline: none;
+                border-color: $font-color;
+            }
+
+            &:invalid {
+                border-color: indianred;
             }
         }
 
@@ -75,8 +97,21 @@
 
             margin-bottom: 5rem;
 
+            border-left: 4px solid rgb(207, 207, 207);
+            transition: all .2s ease-in;
+
+            &.invalid {
+                border-color: indianred;
+
+                &:focus {
+                    border-color: indianred;
+                }
+            }
+
+
             &:focus {
                 outline: none;
+                border-color: $font-color;
             }
         }
 
@@ -94,8 +129,69 @@
             background-color: transparent;
             color: #fff;
             font-size: 1.6rem;
+            cursor: pointer;
+
+            transition: all .3s ease-in;
+
+            &:hover, &:focus {
+                background-color: #fff;
+                border-color: #fff;
+                color: var(--secondary);
+                outline: none;
+            }
         }
 
+    }
+
+
+    &__form.sent > &__confirm {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+
+    &__confirm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 100%;
+        width: 100%;
+
+        padding: 6rem 5rem;
+
+        opacity: 0;
+        pointer-events: none;
+        transition: all .3s ease-in .3s;
+
+        @include respond(phone) {
+            padding: 6rem 3rem;
+        }
+        
+        @include respond(iphone) {
+            padding: 6rem 2rem;
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+            font-size: 3rem;
+            width: 100%;
+        }
+
+        p {
+            margin-bottom: 4rem;
+            font-size: 1.8rem;
+        }
+
+        img {
+            display: block;
+            width: 80%;
+        }
     }
 
     &__phone {

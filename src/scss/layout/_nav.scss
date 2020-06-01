@@ -3,10 +3,41 @@
     padding: 6rem 0;
 
     position: relative;
+    z-index: 1000;
 
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    transition: all .4s ease-in;
+
+    &.compressed {
+
+        padding: 3rem 0 9rem 0;
+
+        &::before {
+            transform: translate(-50%, -6rem);
+        }
+
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top:0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: -1;
+        height: 100%;
+        width: 100vw;
+
+        background-color: var(--bg-color);
+        opacity: .9;
+
+        transition: all .4s ease-in;
+        
+    }
+
 
     &__brand {
         flex-grow: 1;
@@ -46,7 +77,7 @@
 
             font-family: $heading-font;
 
-            margin-right: 5rem;
+            margin-right: 4rem;
             font-weight: 400;
             font-size: 1.4rem;
 
@@ -95,6 +126,12 @@
                 color: var(--primary);
                 font-size: 1.8rem;
             }
+
+            &:hover {
+                background-color: var(--secondary);
+                border-color: var(--secondary);
+                color: #fff;
+            }
         }
     }
 
@@ -112,6 +149,10 @@
         position: fixed;
         z-index: 100000000;
         color: #333;
+
+        @include dark {
+            color: #fff;
+        }
 
         @include respond(tab-port) {
             display: block;

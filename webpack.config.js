@@ -52,15 +52,6 @@ module.exports = {
     module: {
         rules: [
 
-            // JS Test Rules
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader'
-                }
-            },
-
             // HTML Test Rules
             {
                 test: /\.html$/,

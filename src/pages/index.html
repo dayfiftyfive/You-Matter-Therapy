@@ -11,18 +11,26 @@
     <title>You Matter Therapy &ndash; Numra Yaqub, LMHC</title>
 
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="icon" href='/assets/img/favicon/favicon.ico' type='image/x-icon'>
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Nunito+Sans:ital@0;1&family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
 
 
 </head>
-<body>
+<body data-scroll-container>
 
     <!-- Navbar -->
     <nav class="navbar">
 
         <!-- Navbar Logo -->
-        <h5 class="navbar__brand"><a href="#">You Matter Therapy<span class="vert">|</span><span>Numra Yaqub</span></a></h5>
+        <h5 class="navbar__brand"><a href="#">You Matter Therapy<span class="vert">|</span><span>Numra Yaqub, LMHC</span></a></h5>
 
         <!-- Checkbox To Drive Functionality -->
         <input type="checkbox" class="navbar__checkbox" style="display: none" id="nav-checkbox">
@@ -34,29 +42,31 @@
             <a href="/services" class="navbar__link">Services</a>
             <a href="/pricing" class="navbar__link">Pricing</a>
             <a href="/about" class="navbar__link">About Me</a>
-            <a href="../contact" class="navbar__link">Contact Me</a>
-            <a href="https://square.site/book/0BH36T7RHG3Z8/day-fiftyfive-llc-orlando-fl-fl" target="_blank" rel="nofollow" class="navbar__button btn">Make An Appointment</a>
+            <a href="/contact" class="navbar__link">Contact Me</a>
+            <a href="#make-appointment" rel="nofollow" class="navbar__button btn">Make An Appointment</a>
 
         </div>
 
         <!-- "Hamburger" Icon -->
-        <label for="nav-checkbox" class="navbar__icon"></label>
+        <label for="nav-checkbox" class="navbar__icon" data-scroll-sticky></label>
 
     </nav>
 
 
-    <main data-scroll-container>
+    <!-- Main Section -->
+    <main>
 
          <!-- Header -->
-        <header class="hero">
+        <header class="hero" data-scroll-section>
 
-            <div class="hero__content rellax" data-rellax-speed="1">
+            <div class="hero__content rellax" data-scroll>
                 <h1 class="hero__jumbo">You <span>Matter.</span></h1>
+                <h2 class="hero__tagline">Mental Health Services</h2>
                 <h2 class="hero__subtitle">Live up to your full potential.</h2>
                 <a href="../contact" class="hero__cta btn">Talk To Me</a>
             </div>
 
-            <div class="hero__illustration rellax">
+            <div class="hero__illustration rellax" data-scroll data-scroll-speed="1">
                 <img src="../img/float.svg" alt="">
             </div>
 
@@ -64,19 +74,19 @@
 
 
         <!-- Main Body Block -->
-        <section class="overview">
+        <section class="overview" data-scroll-section>
 
-            <div class="overview__quote quote rellax" data-rellax-speed="0">
+            <div class="overview__quote quote" data-scroll data-scroll-speed="1">
                 <hr class="quote__divider divider">
                 <p class="quote__text">&ldquo;Healing takes courage, and we all have courage, even if we have to dig a little to find it.&rdquo;</p>
                 <p class="quote__author">&ndash; Tori Amos</p>
             </div>
 
-            <div class="overview__image rellax">
+            <div class="overview__image" data-scroll data-scroll-speed="1">
                 <img src="../img/relax.svg" alt="Relaxing Illustration">
             </div>
 
-            <div class="overview__content">
+            <div class="overview__content" data-scroll>
 
                 <h2 class="overview__title">Set Yourself Free</h2>
 
@@ -106,7 +116,7 @@
 
 
     <!-- Footer Class -->
-    <footer class="footer">
+    <footer class="footer" data-scroll-section>
 
         <div class="footer__hero">
             <h2 class="footer__brand">You Matter.</h2>
@@ -121,10 +131,49 @@
             <li><a href="/pricing">Pricing</a></li>
             <li><a href="/about">About Me</a></li>
             <li><a href="/contact">Contact Me</a></li>
-            <li><a href="https://square.site/book/0BH36T7RHG3Z8/day-fiftyfive-llc-orlando-fl-fl" target="_blank" rel="nofollow">Make an Appointment</a></li>
+            <li><a href="#make-appointment" rel="nofollow">Make an Appointment</a></li>
         </ul>
         
     </footer>
     
+    
+    <!-- Booking Popup -->
+    <section class="popup" id="make-appointment">
+        <a href="#" class="popup__exit close-popup"></a>
+        <div class="popup__window">
+
+            <div class="popup__nav">
+                <a href="#" class="close-popup">&times;</a>
+            </div>
+
+            <div class="popup__iframe">
+                <script src='https://square.site/appointments/buyer/widget/gs8wgtnkx0ybf2/05JM4HD2SM3GQ.js'></script>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Free Consultation Popup -->
+    <section class="popup" id="free-consultation">
+
+        <a href="#" class="popup__exit close-popup"></a>
+
+        <div class="popup__window popup__window--small">
+
+            <div class="popup__nav">
+                <a href="#" class="close-popup">&times;</a>
+            </div>
+
+            <div class="popup__content">
+                <h2>Free Consultation</h2>
+                <p>Contact me now for a free 15 minute phone consultation.</p>
+                <a href="/contact" class="btn">Contact Me</a>
+            </div>
+
+        </div>
+
+    </section>
+
 </body>
 </html>
