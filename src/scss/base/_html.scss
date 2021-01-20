@@ -5,7 +5,12 @@
     margin:0;
     padding:0;
     box-sizing: inherit;
+    user-select: none;
     //transition: all .2s ease-in;
+}
+
+input {
+    user-select: auto;
 }
 
 html {
