@@ -12,7 +12,8 @@ export default class Scroll {
 
         this.locomotive = new LocomotiveScroll({
             el: $('[data-scroll-container]').nodes(),
-            smooth: true
+            smooth: true,
+            lerp: 0.25
         });
 
         this.navbar = $(".navbar");
