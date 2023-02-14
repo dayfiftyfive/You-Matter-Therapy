@@ -8,15 +8,18 @@
 
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
-    <link rel="icon" href='/assets/img/favicon/favicon.ico' type='image/x-icon'>
-    <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="icon" href='./img/favicon/favicon.ico' type='image/x-icon'>
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
 
 
     <!-- Page Title -->
     <title>About Me &ndash; You Matter Therapy</title>
+
+    <!-- SCSS Import -->
+    <link rel="stylesheet" href="./scss/main.scss">
 
 
     <!-- Fonts -->
@@ -24,13 +27,6 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-209240534-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-209240534-1');
-    </script>
 
 </head>
 <body data-scroll-container>
@@ -40,12 +36,11 @@
 
         <!-- Navbar Logo -->
         <div class="navbar__logo">
-            <img src="../img/logo.svg" alt="logo">
+            <img src="./img/logo.svg" alt="logo">
         </div>
 
         <!-- Navbar Brand -->
-        <!-- <h5 class="navbar__brand"><a href="#">You Matter Therapy<span class="vert">|</span><span>Numra Yaqub, LMHC</span></a></h5> -->
-        <h5 class="navbar__brand"><a href="../"><span>Numra Yaqub, LMHC</span></a></h5>
+        <h5 class="navbar__brand"><a href="index.html"><span>Numra Yaqub, LPC, LMHC</span></a></h5>
 
         <!-- Checkbox To Drive Functionality -->
         <input type="checkbox" class="navbar__checkbox" style="display: none" id="nav-checkbox">
@@ -53,11 +48,11 @@
         <!-- Container For Navigation Links & Mobile Menu -->
         <div class="navbar__container">
 
-            <a href="../" class="navbar__link navbar__link--home">Home</a>
-            <a href="../services" class="navbar__link">Services</a>
-            <a href="../pricing" class="navbar__link">Pricing</a>
+            <a href="index.html" class="navbar__link navbar__link--home">Home</a>
+            <a href="services.html" class="navbar__link">Services</a>
+            <a href="pricing.html" class="navbar__link">Pricing</a>
             <a href="#" class="navbar__link active">About Me</a>
-            <a href="../contact" class="navbar__link">Contact Me</a>
+            <a href="contact.html" class="navbar__link">Contact Me</a>
             <a href="#make-appointment" rel="nofollow" class="navbar__button btn">Make An Appointment</a>
 
         </div>
@@ -77,13 +72,14 @@
             <div class="section-hero__content">
                 <h3>About Me</h3>
                 <hr class="divider">
-                <h2>Numra Yaqub, LMHC</h2>
-                <h4>Licensed Mental Health Counselor</h4>
+                <h2>Numra Yaqub, LPC, LMHCC</h2>
+                <h4>Licensed Professional Counselor, Pennsylvania</h4>
+                <h4>Licensed Mental Health Counselor, Florida</h4>
             </div>
     
             <div class="about__img">
                 <div class="about__circle" data-scroll data-scroll-speed="-1"></div>
-                <img src="../img/about-1.jpg" alt="Picture Of Me" data-scroll data-scroll-speed="1">
+                <img src="./img/about-1.jpg" alt="Picture Of Me" data-scroll data-scroll-speed="1">
             </div>
     
         </header>
@@ -96,11 +92,11 @@
             <div class="about__content" data-scroll>
 
                 <p class="overview__text">
-                    Hello and Welcome! My name is Numra Yaqub. I am originally from New Jersey, where I obtained my Bachelor’s in Psychology at Stockton University. I then moved to Bethlehem, Pennsylvania to obtain my Master’s degree in Counseling and Human Services at Lehigh University. During my time in the Lehigh Valley area, I worked at an inpatient psychiatric facility, where I began to gain experience in working with children, adolescents, and adults with a mental health diagnosis. During that time, I also completed my internship at Kutztown University, providing counseling services to college students.
+                    Hello and Welcome! My name is Numra Yaqub. I am originally from New Jersey, where I obtained my Bachelor's in Psychology at Stockton University. I then moved to Bethlehem, Pennsylvania to obtain my Master's degree in Counseling and Human Services at Lehigh University. During my time in the Lehigh Valley area, I worked at an inpatient psychiatric facility, where I began to gain experience in working with children, adolescents, and adults with a mental health diagnosis. During that time, I also completed my internship at Kutztown University, providing counseling services to college students.
                 </p>
                 
                 <p class="overview__text">
-                    Upon graduating from Lehigh University in 2016, I made a cross-country trip to Florida to begin my career as a Master-level mental health professional. Since then, I have continued to grow, and my resume is colored with a wide range of jobs—from working with children and adolescents, to university students at the University of South Florida’s Counseling Center, to a private practice in Fort Myers, and now I have transitioned into my private practice in Naples, Florida.
+                    Upon graduating from Lehigh University in 2016, I made a cross-country trip to Florida to begin my career as a Master-level mental health professional. Since then, I have continued to grow, and my resume is colored with a wide range of jobs—from working with children and adolescents, to university students at the University of South Florida's Counseling Center, to my private practice in Naples, Florida, and now I have transitioned into my private practice in Bethlehem, Pennsylvania. I am continuing to maintain my Florida license and accepting Florida resident clients virtually. For my Pennsylvania residents, I accept in person and telehealth appointments.
                 </p>
                 
                 <p class="overview__text">
@@ -113,7 +109,7 @@
             <div class="about__grid">
 
                 <div class="about__shapes">
-                    <div class="first" data-scroll data-scroll-speed="-1"><img src="../img/about-2.jpg" alt="Another Picture Of Me"></div>
+                    <div class="first" data-scroll data-scroll-speed="-1"><img src="./img/about-2.jpg" alt="Another Picture Of Me"></div>
                     <div class="second" data-scroll data-scroll-speed="1"></div>
                 </div>
 
@@ -150,7 +146,7 @@
                 </div>
 
                 <div class="about__shapes">
-                    <div class="first" data-scroll data-scroll-speed="-1"><img src="../img/about-3.jpg" alt="Another Picture Of Me"></div>
+                    <div class="first" data-scroll data-scroll-speed="-1"><img src="./img/about-3.jpg" alt="Another Picture Of Me"></div>
                     <div class="second" data-scroll data-scroll-speed="1"></div>
                 </div>
                 
@@ -168,14 +164,12 @@
 
         <div class="footer__hero">
             <h2 class="footer__brand">You Matter.</h2>
-            <p class="footer__copy">&copy; Copyright Numra Yaqub 2020</p>
-            <!-- <a href="https://www.psychologytoday.com/us/therapists/numra-yaqub-fort-myers-fl/748443" target="_blank" class="footer__badge">Verified By Psychology Today</a> -->
+            <p class="footer__copy">&copy; Copyright Numra Yaqub 2023</p>
             <hr class="divider">
             <!-- Professional verification provided by Psychology Today --> 
             <a href="https://www.psychologytoday.com/profile/748443" class="sx-verified-seal"></a> 
             <script type="text/javascript" src="https://member.psychologytoday.com/verified-seal.js" data-badge="13" data-id="748443" data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy9bQkFER0VdL3Byb2ZpbGUvW1BST0ZJTEVfSURdP2NhbGxiYWNrPXN4Y2FsbGJhY2s="></script> 
             <!-- End Verification -->
-            <!-- <a href="https://www.dayfiftyfive.com" target="_blank" class="footer__agency">Designed on Day FiftyFive</a> -->
             <div style="display: block; margin: 1rem 0 0; padding: 0;">
                 <a href="https://www.goodtherapy.org/therapists/profile/numra-yaqub-counselor">
                     <img src="https://www.goodtherapy.org/graph/seals/verified_seal2.png" alt="Numra Yaqub, LMHC verified by GoodTherapy.org">
@@ -185,15 +179,15 @@
 
         <div>
             <ul class="footer__nav">
-                <li><a href="../services">Services</a></li>
-                <li><a href="../pricing">Pricing</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="#">About Me</a></li>
-                <li><a href="../contact">Contact Me</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
                 <li><a href="#make-appointment" rel="nofollow">Make an Appointment</a></li>
             </ul>
             <div class="footer__address">
-                <p>5621 Strand Blvd, Suite 311-A</p>
-                <p>Naples, Florida 34110</p>
+                <p>701 West Broad St, Suite 209</p>
+                <p>Bethlehem, PA 18018</p>
                 <p><a href="tel:239-296-4410">Phone: (239) 296-4410</a></p>
                 <p>Fax: (239) 799-7671</p>
                 <p><a href="https://www.instagram.com/yaqub_psychological_services/" target="_blank" rel="nofollow">Instagram</a></p>
@@ -235,12 +229,14 @@
             <div class="popup__content">
                 <h2>Free Consultation</h2>
                 <p>Contact me now for a free 15 minute phone consultation.</p>
-                <a href="../contact" class="btn">Contact Me</a>
+                <a href="contact.html" class="btn">Contact Me</a>
             </div>
 
         </div>
 
     </section>
+
+    <script src="./js/index.js" type="module"></script>
 
     
 </body>

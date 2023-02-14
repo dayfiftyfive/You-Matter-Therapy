@@ -1,100 +1,93 @@
 .section-hero {
+  margin: 10rem 0;
 
-    margin: 10rem 0;
+  display: flex;
+  justify-content: space-between;
 
+  @include respond(phone) {
+    margin: 5rem 0;
+  }
+
+  & > div {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__content {
+    h3 {
+      font-size: 2.4rem;
+
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+    }
+
+    h2 {
+      font-size: 7.2rem;
+      line-height: 1.1;
+      margin-bottom: 2.4rem;
+      color: #bdd2e8;
+
+      @include respond(laptop) {
+        font-size: 6.5rem;
+      }
+
+      @include respond(tab-land) {
+        font-size: 5.8rem;
+      }
+
+      @include respond(tab-port) {
+        font-size: 4.8rem;
+      }
+
+      @include respond(phone) {
+        font-size: 4.4rem;
+      }
+
+      @include respond(iphone) {
+        font-size: 4rem;
+      }
+    }
+
+    hr.divider {
+      margin: 2rem 0;
+      background-color: var(--font-color);
+    }
+
+    h4 {
+      font-weight: 400;
+      font-size: 2.2rem;
+      opacity: 0.6;
+
+      @include respond(phone) {
+        font-size: 2rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &__illustration {
+    height: 35rem;
+
+    @include respond(laptop) {
+      height: 30rem;
+    }
+
+    @include respond(tab-land) {
+      height: 25rem;
+    }
+
+    @include respond(tab-port) {
+      height: 18rem;
+    }
 
     @include respond(phone) {
-        margin: 5rem 0;
+      display: none !important;
     }
 
-    & > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    img {
+      height: 100%;
     }
-
-    &__content {
-
-        h3 {
-            font-size: 2.4rem;
-
-            @include respond(phone) {
-                font-size: 2rem;
-            }
-        }
-    
-        h2 {
-            font-size: 7.2rem;
-            line-height: 1.1;
-            color: #BDD2E8;
-
-            @include respond(laptop) {
-                font-size: 6.5rem;
-            }
-
-            @include respond(tab-land) {
-                font-size: 5.8rem;
-            }
-
-            @include respond(tab-port) {
-                font-size: 4.8rem;
-            }
-
-            @include respond(phone) {
-                font-size: 4.4rem;
-            }
-
-            @include respond(iphone) {
-                font-size: 4rem;
-            }
-        }
-    
-        hr.divider {
-            margin: 2rem 0;
-            background-color: var(--font-color);
-        }
-    
-        h4 {
-            font-weight: 400;
-            font-size: 2.2rem;
-            margin-top: 2rem;
-
-            @include respond(phone) {
-                font-size: 2rem;
-                margin-top: 1rem;
-            }
-        }
-
-    }
-
-    
-
-    &__illustration {
-
-        height: 35rem;
-
-        @include respond(laptop) {
-            height: 30rem;
-        }
-
-        @include respond(tab-land) {
-            height: 25rem;
-        }
-
-        @include respond(tab-port) {
-            height: 18rem;
-        }
-
-        @include respond(phone) {
-            display: none !important;
-        }
-
-        img {
-            height: 100%;
-        }
-
-    }
-
+  }
 }

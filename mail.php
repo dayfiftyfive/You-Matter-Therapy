@@ -8,7 +8,7 @@
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $postmessage = $_POST['message'];  
-    $to = "youmatter@numrayaqub.com";
+    $to = "numra.yaqub@gmail.com";
     $subject = "New Client Message";
 
 
@@ -42,5 +42,3 @@
             'message' => 'Error sending message'
         ));
     }
-
-?>

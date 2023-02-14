@@ -1,141 +1,147 @@
 .pricing {
+  &__hero {
+    margin-bottom: 10rem;
+  }
 
+  &__quote {
+    display: block;
 
-    &__hero {
-        margin-bottom: 10rem;
+    .quote__text {
+      line-height: 1.7;
+      font-size: 3rem;
+
+      @include respond(tab-land) {
+        font-size: 2.4rem;
+      }
+
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__cards {
+    margin-top: 15rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4.8rem;
+
+    @include respond(tab-land) {
+      grid-template-columns: 1fr;
     }
 
-    &__quote {
-        display: block;
-
-        .quote__text {
-            line-height: 1.7;
-            font-size: 3rem;
-
-            @include respond(tab-land) {
-                font-size: 2.4rem;
-            }
-
-            @include respond(phone) {
-                font-size: 2rem;
-            }
-        }
+    @include respond(phone) {
     }
-
-    &__cards {
-        margin-top: 15rem;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 5rem;
-
-        @include respond(tab-land) {
-            grid-column-gap: 4rem;
-            grid-row-gap: 20rem;
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @include respond(phone) {
-            grid-template-columns: 1fr;
-            grid-row-gap: 10rem;
-        }
-    }
-
+  }
 }
 
 .card {
+  padding: 5rem 4rem;
+  border-radius: calc(var(--block-radius) * 0.75);
+  color: #fff;
+  position: relative;
 
-    padding: 5rem 4rem;
-    border-radius: calc( var(--block-radius) * .75 );
-    color: #fff;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
-    &__title {
-        font-size: 2.8rem;
-        font-weight: 400;
-        margin-bottom: 2rem;
-        line-height: 1.4;
+  hr {
+    border: none;
+    height: 4px;
+    border-radius: 4px;
+    background-color: rgba(white, 25%);
+    margin: 2.4rem 0;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 2rem;
+
+    li {
+      font-size: 2.8rem;
+      font-family: $heading-font;
+      font-weight: 200;
+    }
+  }
+
+  &__button {
+    margin-top: 5rem;
+
+    a.btn {
+      &,
+      &:link,
+      &:visited {
+        color: #fff;
+      }
+    }
+  }
+
+  &--pricing {
+    background-image: linear-gradient(
+      -135deg,
+      var(--primary),
+      var(--secondary)
+    );
+
+    @include respond(iphone) {
+      padding-bottom: 8rem;
     }
 
-    &__list {
-        list-style: none;
-        margin-top: 2rem;
-
-        li {
-            font-size: 2.8rem;
-            font-family: $heading-font;
-            font-weight: 200;
-        }
+    .card__title {
+      margin-bottom: 0;
     }
 
-    &__button {
-        margin-top: 5rem;
+    img {
+      position: absolute;
+      width: calc(100% + 5rem);
+      left: -2.5rem;
+      bottom: -10rem;
 
-        a.btn {
-            &, &:link, &:visited {
-                color: #fff;
-            }
-        }
+      @include respond(phone) {
+        width: 50%;
+        left: auto;
+        right: 0;
+        bottom: -4rem;
+      }
     }
+  }
 
+  &--options {
+    background-image: linear-gradient(-135deg, var(--tertiary), var(--primary));
+  }
 
-    &--pricing {
-        background-image: linear-gradient(-135deg, var(--primary), var(--secondary));
-
-        @include respond(iphone) {
-            padding-bottom: 8rem;
-        }
-
-        .card__title {
-            margin-bottom: 0;
-        }
-
-        img {
-            position: absolute;
-            width: calc( 100% + 5rem );
-            left: -2.5rem;
-            bottom: -10rem;
-
-            @include respond(phone) {
-                width: 50%;
-                left: auto;
-                right: 0;
-                bottom: -4rem;
-            }
-        }
+  &--discounts {
+    background-color: $font-color;
+    p:not(.card__button) {
+      font-size: 1.8rem;
+      line-height: 2.2;
     }
-
-    &--options {
-        background-image: linear-gradient(-135deg, var(--tertiary), var(--primary));
-    }
-
-    &--discounts {
-        background-color: $font-color;
-        p:not(.card__button) {
-            font-size: 1.8rem;
-            line-height: 2.2;
-        }
-
-    }
-
+  }
 }
 
-
 .cost {
-    font-weight: 200;
-    font-size: 4.4rem;
+  font-weight: 200;
+  font-size: 4rem;
 
-    @include respond(tab-port) {
-        font-size: 3.8rem;
-    }
+  @include respond(tab-port) {
+    font-size: 3.8rem;
+  }
 
-    &__subtitle {
-        font-weight: 400;
-        font-size: 2.2rem;
-        opacity: .5;
-    }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 2rem;
+    opacity: 0.5;
+  }
 }
 
 .insurance {
-    font-style: italic;
-    font-size: 1.8rem;
+  font-style: italic;
+  font-size: 1.8rem;
 }
