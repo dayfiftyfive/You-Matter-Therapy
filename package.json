@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Website for Numra Yaqub.",
   "scripts": {
-    "watch": "rm -rf dist && rm -rf .parcel-cache && parcel src/*.html",
-    "build": "rm -rf dist && rm -rf .parcel-cache && parcel build src/*.html && zip -vr dist_files.zip dist/ -x \"*.DS_Store\""
+    "watch": "rm -rf dist && rm -rf dist_files.zip && rm -rf .parcel-cache && parcel src/*.html",
+    "build": "rm -rf dist && rm -rf .parcel-cache && rm -rf dist_files.zip && parcel build src/*.html && zip -vr dist_files.zip dist/ -x \"*.DS_Store\""
   },
   "repository": {
     "type": "git",
